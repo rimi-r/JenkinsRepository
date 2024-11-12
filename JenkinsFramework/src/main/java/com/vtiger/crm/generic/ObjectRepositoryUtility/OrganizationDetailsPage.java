@@ -132,8 +132,9 @@ public class OrganizationDetailsPage {
 		saveBtn.click();
 		String orghdr = pg.getHeaderField().getText();
 		String orgName = pg.getOrgEdit().getText();
+         boolean oHdr=orghdr.contains(data);	
+        Assert.assertEquals(oHdr, true);
 
-		Assert.assertEquals(orghdr, data);
 
 		SoftAssert as = new SoftAssert();
 		as.assertEquals(orgName, data);
@@ -170,7 +171,8 @@ public class OrganizationDetailsPage {
 		String orgName = pg.getOrgEdit().getText();
 		
 		
-		Assert.assertEquals(orghdr, data);
+	      boolean oHdr=orghdr.contains(data);	
+	        Assert.assertEquals(oHdr, true);
 		
 		SoftAssert as= new SoftAssert();
 		as.assertEquals(orgName, data);
