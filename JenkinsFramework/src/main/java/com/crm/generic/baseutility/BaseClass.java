@@ -58,7 +58,7 @@ public class BaseClass extends WebDriverUtility {
 	public void configCS() throws IOException, ParseException
 	{
 		System.out.println("Before class==> launch the browser");
-		String browser=System.getProperty("browser");
+		String browser=System.getProperty("BROWSER");
 		System.out.println("hi:"+browser);//, jv.getDataFromJsonFile("browser")
 		if(browser.equals("chrome"))
 		{
