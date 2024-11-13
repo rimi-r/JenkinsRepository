@@ -58,7 +58,7 @@ public class BaseClass extends WebDriverUtility {
 	public void configCS() throws IOException, ParseException
 	{
 		System.out.println("Before class==> launch the browser");
-		String browser=System.getProperty("browser", jv.getDataFromJsonFile("browser"));
+		String browser=System.getProperty("browser");//, jv.getDataFromJsonFile("browser")
 		if(browser.equals("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -96,10 +96,10 @@ public class BaseClass extends WebDriverUtility {
 		System.out.println("Before Method ==> login");
 	 
 		LoginPage lp=new LoginPage(driver);
-		String url=System.getProperty("url"); //.getDataFromJsonFile("url");
-		String usn=System.getProperty("usn");//jv.getDataFromJsonFile("usn");
-		String pwd=System.getProperty("pwd");//jv.getDataFromJsonFile("pwd");
-		lp.loginToApp(url, usn, pwd);
+		String url=System.getProperty("url"); //jv.getDataFromJsonFile("url");
+		String Usn=System.getProperty("usn");//jv.getDataFromJsonFile("usn");
+		String Pwd=System.getProperty("pwd");//jv.getDataFromJsonFile("pwd");
+		lp.loginToApp(url, Usn, Pwd);
 	}
 	
 	@AfterMethod(groups= {"smokeTesting","regressionTesting"})
