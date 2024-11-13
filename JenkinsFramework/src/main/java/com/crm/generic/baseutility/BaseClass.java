@@ -96,7 +96,7 @@ public class BaseClass extends WebDriverUtility {
 		System.out.println("Before Method ==> login");
 	 
 		LoginPage lp=new LoginPage(driver);
-		String url=System.getProperty("url"); //jv.getDataFromJsonFile("url");
+		String url=System.getProperty("url",jv.getDataFromJsonFile("url");
 		String Usn=System.getProperty("usn");//jv.getDataFromJsonFile("usn");
 		String Pwd=System.getProperty("pwd");//jv.getDataFromJsonFile("pwd");
 		lp.loginToApp(url, Usn, Pwd);
