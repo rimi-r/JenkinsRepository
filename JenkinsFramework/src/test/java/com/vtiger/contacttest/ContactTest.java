@@ -8,7 +8,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.crm.generic.baseutility.BaseClass;
-@Listeners(com.vtiger.crm.listenerutilitytest.ListenerImplemenetationTest.class)
+//@Listeners(com.vtiger.crm.listenerutilitytest.ListenerImplemenetationTest.class)
 public class ContactTest extends BaseClass  {
 
 	@Test(groups="smokeTesting")

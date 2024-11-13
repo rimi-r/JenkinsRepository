@@ -21,7 +21,7 @@ import com.vtiger.crm.generic.ObjectRepositoryUtility.OrganizationPage;
 import com.vtiger.crm.generic.fileutility.ExcelUtility;
 import com.vtiger.crm.generic.webdriverutility.UtilityClassObject;
 
-@Listeners(com.vtiger.crm.listenerutilitytest.ListenerImplemenetationTest.class)
+//@Listeners(com.vtiger.crm.listenerutilitytest.ListenerImplemenetationTest.class)
 public class OrgTest extends BaseClass{
 
 	@Test(groups = "smokeTesting")
