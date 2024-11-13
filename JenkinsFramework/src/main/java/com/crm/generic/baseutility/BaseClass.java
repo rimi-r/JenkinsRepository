@@ -58,7 +58,8 @@ public class BaseClass extends WebDriverUtility {
 	public void configCS() throws IOException, ParseException
 	{
 		System.out.println("Before class==> launch the browser");
-		String browser=System.getProperty("browser");//, jv.getDataFromJsonFile("browser")
+		String browser=System.getProperty("browser");
+		System.out.println("hi:"+browser);//, jv.getDataFromJsonFile("browser")
 		if(browser.equals("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -67,6 +68,8 @@ public class BaseClass extends WebDriverUtility {
 		{
 			driver=new FirefoxDriver();
 		}
+		else 
+			driver=new ChromeDriver();
 		sdriver=driver;
 		UtilityClassObject.setDriver(driver);
 	}
@@ -96,7 +99,7 @@ public class BaseClass extends WebDriverUtility {
 		System.out.println("Before Method ==> login");
 	 
 		LoginPage lp=new LoginPage(driver);
-		String url=System.getProperty("url",jv.getDataFromJsonFile("url");
+		String url=System.getProperty("url");//,jv.getDataFromJsonFile("url"
 		String Usn=System.getProperty("usn");//jv.getDataFromJsonFile("usn");
 		String Pwd=System.getProperty("pwd");//jv.getDataFromJsonFile("pwd");
 		lp.loginToApp(url, Usn, Pwd);
