@@ -26,6 +26,8 @@ public class ContactTest extends BaseClass {
 
 		int ran = js.getRandomeNumber();
 		System.out.println("testig");
+		
+		System.out.println("testing2");
 
 		String lastName = ex.getDataFromExcel("Sheet1", 1, 2) + ran;
 
